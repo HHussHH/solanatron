@@ -1,0 +1,184 @@
+.Contract{
+  display: flex;
+  justify-content: center;
+  margin: 51px auto 0;
+  flex-direction: column;
+  gap:28px;
+
+
+  @media screen and (max-width: 480px) {
+    margin: 51px 0 0;
+    flex-direction: column;
+    gap:20px;
+  }
+  @media screen and (max-width: 320px) {
+    margin: 51px 0 0;
+    flex-direction: column;
+    gap:40px;
+  }
+
+  &__info{
+    width: 192px;
+    height: 59px;
+    border-radius: 250px;
+    padding: 8px 13px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    font-family: Inter, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    &::after{
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top:50%;
+      left:0;
+      border: 2px solid transparent;
+      border-radius: 0 0 50px 50px;
+      background:
+              linear-gradient(to right, #141316 , #141316),
+              linear-gradient(to right, #FFF , #FFF);
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+      border-top: none;
+      border-left:none;
+      border-right:none;
+      z-index: -1;
+    }
+    @media screen and (max-width: 480px) {
+      width: 144px;
+      height: 44px;
+      font-size: 24px;
+    }
+    @media screen and (max-width: 425px) {
+      width: 100px;
+      height: 35px;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 355px) {
+      width: 90px;
+    }
+    @media screen and (max-width: 320px) {
+      width: 80px;
+      margin-left: 0px;
+      height: 35px;
+      font-size: 16px;
+    }
+  }
+  &__links{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    width: 1057px;
+    &:before{
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      height: 1px;
+      width: 100%;
+      z-index: 1;
+      top:85%;
+      left: 0;
+    }
+    &__text{
+      font-size: 16px;
+      font-weight: 400;
+      font-family: Inter,sans-serif;
+      position: relative; // Устанавливаем относительное позиционирование для родителя
+      display: inline-block; // Устанавливаем блочно-строчный элемент для корректной работы псевдоэлемента
+      @media screen and (max-width: 868px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+      }
+
+    }
+  }
+  &__link{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+    @media screen and (max-width: 480px) {
+      gap:10px;
+    }
+    @media screen and (max-width: 425px) {
+      gap:5px;
+    }
+    &__right{
+      top:0;
+      right:20px;
+      @media screen and (max-width: 1440px) {
+        right: 20px;
+      }
+      @media screen and (max-width: 1300px) {
+        right: -50px;
+      }
+      @media screen and (max-width: 1000px) {
+        right: 0;
+      }
+      @media screen and (max-width: 868px) {
+        right: -20px;
+      }
+
+      @media screen and (max-width: 480px) {
+        right: 10px;
+      }
+      @media screen and (max-width: 450px) {
+        right: -15px;
+      }
+
+      @media screen and (max-width: 375px) {
+        right: -20px;
+      }
+      @media screen and (max-width: 340px) {
+        right: -15px;
+      }
+
+    }
+    &__left{
+      top:0;
+      left:50px;
+      @media screen and (max-width: 1440px) {
+        left: 10px;
+      }
+      @media screen and (max-width: 1300px) {
+        left: -50px;
+      }
+      @media screen and (max-width: 1000px) {
+        left: 0;
+      }
+      @media screen and (max-width: 868px) {
+        left: -20px;
+      }
+      @media screen and (max-width: 480px) {
+        left: 10px;
+      }
+      @media screen and (max-width: 450px) {
+        left: -15px;
+      }
+      @media screen and (max-width: 375px) {
+        left: -20px;
+      }
+      @media screen and (max-width: 340px) {
+        left: -15px;
+      }
+
+
+    }
+  }
+}

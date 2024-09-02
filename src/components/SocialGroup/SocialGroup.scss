@@ -1,0 +1,51 @@
+.SocialGroup{
+ width: 700px;
+ display: flex;
+  align-items: center;
+  //justify-content: space-between;
+  justify-content: center;
+gap:2px;
+  margin: 40px auto 0px;
+
+ &__link{
+  width: 172px;
+  height: 92px;
+  background: #1C191D;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover{
+   background: #2a2a30;
+
+  }
+  &:first-child{
+   border-radius: 180px 0 0 180px;
+  }
+  &:last-child{
+   border-radius:  0 180px 180px 0;
+  }
+
+  svg{
+   background: none;
+  }
+ }
+ @media screen and (max-width: 1024px) {
+  width: 100%;
+  justify-content: center;
+  gap:150px;
+  margin: 71px auto;
+ }
+ @media screen and (max-width: 480px) {
+  gap:0;
+  justify-content: space-around;
+ }
+
+&-end{
+ margin-top: 128px;
+ margin-bottom: 136px;
+}
+}

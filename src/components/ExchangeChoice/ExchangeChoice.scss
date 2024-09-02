@@ -1,0 +1,28 @@
+.ExchangeChoice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__vs{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#535151;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 375px) {
+    flex-direction: column;
+  }
+  &__exchange{
+    gap:30px;
+  }
+
+
+}
