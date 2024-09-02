@@ -4,21 +4,21 @@
   justify-content: center;
   align-items: center;
   gap:30px;
-  @media screen and (max-width: 425px) {
-    gap:10px;
+  @media screen and (max-width: 480px) {
+    margin: 80px auto 24px;
   }
-
+  @media screen and (max-width: 320px) {
+    gap:15px;
+  }
   &__text{
     font-size: 30px;
     font-weight: 800;
     font-family: 'Inter', sans-serif;
     color:#FFFFFF;
     @media screen and (max-width: 480px) {
-      font-size: 25px;
+      font-size: 16px;
     }
-    @media screen and (max-width: 425px) {
-      font-size: 20px;
-    }
+
   }
   &__btn{
     width: 366px;
@@ -60,7 +60,7 @@
       font-size: 25px;
     }
     @media screen and (max-width: 550px) {
-      width: 156px;
+      width: 160px;
     }
 
     @media screen and (max-width: 425px) {

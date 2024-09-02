@@ -12,6 +12,10 @@
     margin: 90px auto 0;
     flex-direction: column;
     gap:28px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
   }
   &__total{
     display: flex;
@@ -40,7 +44,7 @@
     padding: 8px 13px;
     font-size: 33px;
     font-weight: bold;
-    color: #AAAAAA;
+    color: #FFF;
     font-family: Inter, serif;
     display: flex;
     align-items: center;

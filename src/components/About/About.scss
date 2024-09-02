@@ -4,6 +4,9 @@
   align-self: center;
   margin-top: 130px;
   margin-bottom: 27px;
+  @media screen and (max-width: 768px){
+    margin-top: 60px;
+  }
   &__text{
     font-family: Inter, sans-serif;
     font-weight: 400;
@@ -13,13 +16,14 @@
     height: auto;
     text-align: center;
     line-height: 122%;
-    @media screen and (max-width: 1440px) {
-      font-size: 42px;
-      padding: 0 34px;
+
+    @media screen and (max-width: 768px){
+      max-width: 430px;
+      font-size: 24px;
     }
-    @media screen and (max-width: 768px) {
-      font-size: 32px;
-      padding: 0 34px;
+    @media screen and (max-width: 425px){
+      max-width: 320px;
+      font-size: 16px;
     }
   }
 }

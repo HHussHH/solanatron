@@ -6,7 +6,12 @@
   justify-content: center;
 gap:2px;
   margin: 40px auto 0px;
-
+ @media screen and (max-width: 767px) {
+  width: 400px;
+ }
+ @media screen and (max-width: 425px){
+  width: 320px;
+ }
  &__link{
   width: 172px;
   height: 92px;
@@ -17,7 +22,13 @@ gap:2px;
   margin: 0;
   padding: 0;
   cursor: pointer;
-
+  @media screen and (max-width: 1024px) {
+   width: 145px;
+   height: 83px;
+  }
+  @media screen and (max-width: 375px){
+   width: 100px;
+  }
   &:hover{
    background: #2a2a30;
 
@@ -33,19 +44,12 @@ gap:2px;
    background: none;
   }
  }
- @media screen and (max-width: 1024px) {
-  width: 100%;
-  justify-content: center;
-  gap:150px;
-  margin: 71px auto;
- }
- @media screen and (max-width: 480px) {
-  gap:0;
-  justify-content: space-around;
- }
+
+
+
 
 &-end{
- margin-top: 128px;
- margin-bottom: 136px;
+ margin-top: 50px;
+ margin-bottom: 56px;
 }
 }

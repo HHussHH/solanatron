@@ -1,8 +1,7 @@
 import React from 'react';
 import "./LearnMore.scss"
-import SocialGroup from "../SocialGroup/SocialGroup.jsx";
 
-const LearnMore = ({urlLearnMore,urls}) => {
+const LearnMore = ({urlLearnMore}) => {
 
     const link = urlLearnMore.learnMore || "https://google.com"
     return (
