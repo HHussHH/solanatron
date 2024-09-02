@@ -149,8 +149,12 @@
       height: 4px;
       font-size: 12px;
     }
-
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 480px) {
+      width: 165px;
+      height: 4px;
+      font-size: 12px;
+    }
+    @media screen and (max-width: 479px) {
       width: 120px;
       height: 4px;
       font-size: 12px;
