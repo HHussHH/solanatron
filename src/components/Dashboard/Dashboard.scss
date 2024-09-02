@@ -16,6 +16,9 @@
     @media screen and (max-width: 768px) {
       margin-top: 40px;
     }
+    @media screen and (min-width: 2000px) {
+      margin-top: 140px;
+    }
   }
   &__total{
     display: flex;
