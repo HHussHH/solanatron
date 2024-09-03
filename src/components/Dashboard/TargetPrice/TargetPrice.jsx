@@ -4,8 +4,8 @@ import useWindowSize from "../../../helpers/useWindowSize.js";
 const TargetPrice = ({data}) => {
 
     const currentValue = data.TargetPriceValue || 0.05
-    const currentTRX = 220;
-    const currentSOL = 80;
+    const currentTRX = 0.05;
+    const currentSOL = 0.03;
 
     const { progressValue } = useWindowSize(currentValue, currentTRX, currentSOL);
 

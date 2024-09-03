@@ -14,7 +14,7 @@ import {fetchData} from "./fetchData/fetchData.js";
 function App() {
     const [jsonData, setJsonData] = useState(null);
 
-    const [loading, setLoading] = useState(true); // Состояние для отслеживания загрузки данных
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
 
@@ -33,7 +33,7 @@ function App() {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>; // Отображение индикатора загрузки, пока данные загружаются
+        return <div>Loading...</div>;
     }
 
     return (

@@ -3,7 +3,6 @@ import "./ExchangeChoice.scss";
 
 import {ReactComponent as Raydium} from "../../assets/icons/RaydiumIcon.svg"
 import {ReactComponent as Sunswap} from "../../assets/icons/SunswapIcon.svg"
-import {ReactComponent as VsIcon} from "../../assets/icons/VsIcon.svg"
 const ExchangeChoice = ({urls}) => {
     const RaydiumLink = urls.RAYDIUM || "https://google.com";
     const SunswapLink = urls.SUNSWAP || "https://google.com";

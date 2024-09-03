@@ -112,8 +112,8 @@
       font-size: 16px;
       font-weight: 400;
       font-family: Inter,sans-serif;
-      position: relative; // Устанавливаем относительное позиционирование для родителя
-      display: inline-block; // Устанавливаем блочно-строчный элемент для корректной работы псевдоэлемента
+      position: relative;
+      display: inline-block;
       @media screen and (max-width: 868px) {
         font-size: 16px;
       }

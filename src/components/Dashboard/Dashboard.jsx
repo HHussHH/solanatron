@@ -22,7 +22,7 @@ const Dashboard = ({data}) => {
                 TargetCommunityTrx:data.TargetCommunityTrx,
             }}/>
             <PumpPool data={{
-                PumpPoolValue:data.TargetCommunityValue,
+                PumpPoolValue:data.PumpPoolValue,
                 PumpPoolSolUrl:data.PumpPoolSolUrl,
                 PumpPoolTrxUrl:data.PumpPoolTrxUrl,
                 PumpPoolSol:data.PumpPoolSol,

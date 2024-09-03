@@ -15,19 +15,18 @@ const Charity = ({data}) =>  {
     const [copied, setCopied] = useState({ SOL: false, TRX: false });
 
 
+    const updateCopied = (textType) =>{
+        setTimeout(() =>{
+            setCopied(prev => ({ ...prev, [textType]: false }));
+        },2000)
+    }
     const copyHandler = (text,textType) => {
         сopyToClipboard(text)
         setCopied(prev => ({ ...prev, [textType]: true }));
+        updateCopied(textType)
     }
-    useEffect(() => {
-        if(copied.SOL || copied.TRX) {
-            setTimeout(() =>{
-                setCopied({SOL:false,TRX:false});
-            },2000)
-        }
-    }, [copied]);
 
-// Расчет заполнения в процентах для левого значения
+
     const SolToCopy = data.CharitySolUrl || "6NRNLiswWzp6PW7FhKi6mWBehijflKSH34u9q3kL1dEXc1tfYu";
     const TrxToCopy = data.CharityTrxUrl || "6NRNLiswWzp6PW7FhKi6mWBehijflKSH34u9q3kL1dEXc1tfYu";
 

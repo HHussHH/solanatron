@@ -12,18 +12,18 @@ const Contract = ({data}) => {
     const { currentWidth } = useWindowSize();
     const [copied, setCopied] = useState({ SOL: false, TRX: false });
 
+    const updateCopied = (textType) =>{
+        setTimeout(() =>{
+            setCopied(prev => ({ ...prev, [textType]: false }));
+        },2000)
+    }
 
     const copyHandler = (text,textType) => {
         сopyToClipboard(text)
         setCopied(prev => ({ ...prev, [textType]: true }));
+        updateCopied(textType)
     }
-    useEffect(() => {
-        if(copied.SOL || copied.TRX) {
-            setTimeout(() =>{
-                setCopied({SOL:false,TRX:false});
-            },2000)
-        }
-    }, [copied]);
+
 
     const currentLen = currentWidth > 1300 ? 28 : currentWidth > 768 ? 14 : 6;
     return (
