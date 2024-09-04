@@ -65,10 +65,10 @@ function App() {
               SWHALE: jsonData.SWHALE_SITE,
               TWHALE:jsonData.TWHALE_SITE
           }}/>
-          <ExchangeChoice urls={{
-              RAYDIUM: jsonData.RAYDIUM_SITE,
-              SUNSWAP:jsonData.SUNSWAP_SITE
-          }}/>
+          {/*<ExchangeChoice urls={{*/}
+          {/*    RAYDIUM: jsonData.RAYDIUM_SITE,*/}
+          {/*    SUNSWAP:jsonData.SUNSWAP_SITE*/}
+          {/*}}/>*/}
           <About/>
           <LearnMore urlLearnMore={{learnMore: jsonData.LEARN_MORE_SITE}} urls={{
               twitter: jsonData.TWITTER_URL,

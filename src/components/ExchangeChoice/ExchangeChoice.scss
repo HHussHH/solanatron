@@ -25,11 +25,10 @@
     font-weight: 400;
     color:#535151;
     width: 170px;
-    margin-right: 20px;
+
     @media screen and (max-width: 600px){
       width: 52px;
       height: 86px;
-      margin-right: 17px;
     }
     @media screen and (max-width: 425px){
       margin-right: 0;
