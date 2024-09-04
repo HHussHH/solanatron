@@ -1,5 +1,6 @@
 import React from 'react';
 import "./BuyButton.scss"
+import ExchangeChoice from "../ExchangeChoice/ExchangeChoice.jsx";
 
 const BuyButton = ({urls}) => {
     const SWHALE = urls.SWHALE || "https://google.com";

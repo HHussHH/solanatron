@@ -152,6 +152,11 @@
       height: 4px;
       font-size: 12px;
     }
+    @media screen and (max-width: 550px) {
+      width: 120px;
+      height: 4px;
+      font-size: 12px;
+    }
     @media screen and (max-width: 480px) {
       width: 165px;
       height: 4px;
@@ -246,7 +251,9 @@
     font-size: 14px;
 
     cursor: pointer;
-
+    @media screen and (max-width: 550px) {
+      left:0;
+    }
     @media screen and (max-width: 480px) {
       left:15%;
     }

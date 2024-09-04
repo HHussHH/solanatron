@@ -14,7 +14,7 @@ const Dashboard = ({data}) => {
                 SolCopy:data.TrxCopy,
                 TrxCopy:data.SolCopy,
             }}/>
-            <TargetPrice data={{
+        <TargetPrice data={{
                 TargetPriceValue:data.TargetPriceValue}}/>
             <TargetComunityControl data={{
                 TargetCommunityValue:data.TargetCommunityValue,

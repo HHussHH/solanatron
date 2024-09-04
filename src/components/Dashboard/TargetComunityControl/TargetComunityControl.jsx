@@ -14,7 +14,7 @@ const TargetComunityControl = ({data}) => {
             <div className={"Dashboard__targetBar"}>
                 <div className={"Dashboard__leftBar"}>
                     <span className={"Dashboard__leftBar__currentValue"}>{currentSOL+"%"}</span>
-                    <span style={{width: `${progressValue.SOL}px`}} className={"Dashboard__leftBar__progress"}></span>
+                    <span style={{width: `${progressValue.SOL}%`}} className={"Dashboard__leftBar__progress"}></span>
                 </div>
                 <div className={"Dashboard__total"}>
                     <span className={"Dashboard__info"}>
@@ -23,7 +23,7 @@ const TargetComunityControl = ({data}) => {
                 </div>
                 <div className={"Dashboard__rightBar"}>
                     <span className={"Dashboard__rightBar__currentValue"}>{currentTRX+"%"}</span>
-                    <span style={{width: `${progressValue.TRX}px`}} className={"Dashboard__rightBar__progress"}></span>
+                    <span style={{width: `${progressValue.TRX}%`}} className={"Dashboard__rightBar__progress"}></span>
                 </div>
             </div>
         </div>

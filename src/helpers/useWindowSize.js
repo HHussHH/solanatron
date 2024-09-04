@@ -8,19 +8,6 @@ function useWindowSize(currentValue, currentTRX, currentSOL) {
         TRX: 0,
     });
 
-    const progressBarWidth = {
-        "1920": 549,
-        "1440": 529,
-        "1300": 429,
-        "868": 250,
-        "480": 165,
-        "479": 120,
-        "450": 120,
-        "425": 120,
-        "375": 100,
-        "320": 100,
-    };
-
     useEffect(() => {
         const handleResize = () => setCurrentWidth(window.innerWidth);
 
@@ -30,12 +17,9 @@ function useWindowSize(currentValue, currentTRX, currentSOL) {
             const fillPercentageSOL = Math.min((currentSOL / currentValue) * 100, 100);
             const fillPercentageTRX = Math.min((currentTRX / currentValue) * 100, 100);
 
-            const newProgressValueSOL = (fillPercentageSOL / 100) * (progressBarWidth[currentWidth] || progressBarWidth["320"]);
-            const newProgressValueTRX = (fillPercentageTRX / 100) * (progressBarWidth[currentWidth] || progressBarWidth["320"]);
-
             setProgressValue({
-                SOL: newProgressValueSOL,
-                TRX: newProgressValueTRX,
+                SOL: fillPercentageSOL,
+                TRX: fillPercentageTRX,
             });
         };
 
@@ -43,7 +27,8 @@ function useWindowSize(currentValue, currentTRX, currentSOL) {
 
         return () => window.removeEventListener('resize', handleResize);
     }, [currentWidth, currentValue, currentTRX, currentSOL]);
+
     return { progressValue, currentWidth };
 }
 
-export default useWindowSize;
+export default useWindowSize

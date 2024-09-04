@@ -25,7 +25,7 @@ const Contract = ({data}) => {
     }
 
 
-    const currentLen = currentWidth > 1300 ? 28 : currentWidth > 768 ? 14 : 6;
+    const currentLen = currentWidth > 1300 ? 28 : currentWidth  > 786 ? 14 : 6;
     return (
             <div className="Contract__links">
                 <div onClick={() => copyHandler(SOLtextToCopy,"SOL") } className={"Contract__link Contract__link__left"}>
