@@ -1,16 +1,31 @@
 .ExchangeChoice{
   display: flex;
   justify-content: center;
-  gap:35px;
+  gap:110px;
   align-items: center;
   position: relative;
+  @media screen and (max-width: 1024px){
+    gap:30px;
+  }
+  @media screen and (max-width: 768px) {
+    gap:0;
+  }
+  @media screen and (max-width: 600px) {
+    gap:50px;
+  }
+  @media screen and (max-width: 480px) {
+    gap:34px;
+  }
+  @media screen and (max-width: 425px) {
+    gap:20px;
+  }
   &__vs{
     font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color:#535151;
     width: 170px;
-    margin-right: 18px;
+    margin-right: 20px;
     @media screen and (max-width: 600px){
       width: 52px;
       height: 86px;
@@ -30,6 +45,7 @@
   &__exchange{
       &__left{
         width:170px;
+
         @media screen and (max-width: 600px){
           width: 120px;
         }
