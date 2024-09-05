@@ -4,10 +4,45 @@ import useWindowSize from "../../../helpers/useWindowSize.js";
 const TargetPrice = ({data}) => {
 
     const currentValue = data.TargetPriceValue || 0.05
-    const currentTRX = 0.05;
-    const currentSOL = 0.03;
+    const [currentSOL,setCurrentSOL] = useState(0);
+    const [currentTRX,setCurrentTRX] = useState(0);
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('https://api.vd3.fun/v1/externals/swhale-currency')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setCurrentSOL(Number(data.price).toFixed(6));
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.log(error);
+                setLoading(false);
+            });
+
+        fetch('https://api.vd3.fun/v1/externals/twhale-currency')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setCurrentTRX(Number(data.price).toFixed(6));
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.log(error);
+                setLoading(false);
+            });
+    }, []);
 
     const { progressValue } = useWindowSize(currentValue, currentTRX, currentSOL);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
 
     return (
         <div className={"Dashboard"}>

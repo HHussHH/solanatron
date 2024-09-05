@@ -17,10 +17,7 @@ const Dashboard = ({data}) => {
         <TargetPrice data={{
                 TargetPriceValue:data.TargetPriceValue}}/>
             <TargetComunityControl data={{
-                TargetCommunityValue:data.TargetCommunityValue,
-                TargetCommunitySol:data.TargetCommunitySol,
-                TargetCommunityTrx:data.TargetCommunityTrx,
-            }}/>
+                TargetCommunityValue:data.TargetCommunityValue}}/>
             <PumpPool data={{
                 PumpPoolValue:data.PumpPoolValue,
                 PumpPoolSolUrl:data.PumpPoolSolUrl,

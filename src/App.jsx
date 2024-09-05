@@ -7,28 +7,24 @@ import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import BuyButton from "./components/BuyButton/BuyButton.jsx";
 import About from "./components/About/About.jsx";
 import LearnMore from "./components/LearnMore/LearnMore.jsx";
-import ExchangeChoice from "./components/ExchangeChoice/ExchangeChoice.jsx";
 import {fetchData} from "./fetchData/fetchData.js";
 
 
 function App() {
     const [jsonData, setJsonData] = useState(null);
-
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+
 
         fetchData()
             .then((fetchedData) => {
                 setJsonData(fetchedData);
                 setLoading(false);
-
-
             })
             .catch((err) => {
                 console.log(err);
                 setLoading(false);
-
             });
     }, []);
 
@@ -63,12 +59,10 @@ function App() {
           }}/>
           <BuyButton urls={{
               SWHALE: jsonData.SWHALE_SITE,
-              TWHALE:jsonData.TWHALE_SITE
+              TWHALE:jsonData.TWHALE_SITE,
+              RAYDIUM: jsonData.RAYDIUM_SITE,
+              SUNSWAP:jsonData.SUNSWAP_SITE
           }}/>
-          {/*<ExchangeChoice urls={{*/}
-          {/*    RAYDIUM: jsonData.RAYDIUM_SITE,*/}
-          {/*    SUNSWAP:jsonData.SUNSWAP_SITE*/}
-          {/*}}/>*/}
           <About/>
           <LearnMore urlLearnMore={{learnMore: jsonData.LEARN_MORE_SITE}} urls={{
               twitter: jsonData.TWITTER_URL,

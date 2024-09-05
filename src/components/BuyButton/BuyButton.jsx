@@ -8,13 +8,15 @@ import {ReactComponent as VsIcon} from "../../assets/icons/VsIcon.svg"
 const BuyButton = ({urls}) => {
     const SWHALE = urls.SWHALE || "https://google.com";
     const TWHALE = urls.TWHALE || "https://google.com";
+    const RAYDIUM = urls.RAYDIUM || "https://google.com";
+    const SUNSWAP = urls.SUNSWAP || "https://google.com";
     return (
         <div className="Buy-button">
             <div className="Buy-button__leftSide">
                 <a href={SWHALE} rel="noreferrer" target="_blank">
                     <button className="Buy-button__btn Buy-button__btn-solana">SWHALE</button>
                 </a>
-                <a className="ExchangeChoice__icon" href={SWHALE} rel="noreferrer" target="_blank">
+                <a className="ExchangeChoice__icon" href={RAYDIUM} rel="noreferrer" target="_blank">
                     <Raydium className={"ExchangeChoice__exchange ExchangeChoice__exchange__left"}/>
                 </a>
             </div>
@@ -28,7 +30,7 @@ const BuyButton = ({urls}) => {
             <a href={TWHALE} rel="noreferrer" target="_blank">
                 <button className="Buy-button__btn Buy-button__btn-tron">TWHALE</button>
             </a>
-                <a className="ExchangeChoice__icon" href={TWHALE} rel="noreferrer" target="_blank">
+                <a className="ExchangeChoice__icon" href={SUNSWAP} rel="noreferrer" target="_blank">
                     <Sunswap className={"ExchangeChoice__exchange ExchangeChoice__exchange__right"}/>
                 </a>
             </div>
