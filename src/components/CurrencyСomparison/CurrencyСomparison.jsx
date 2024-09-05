@@ -1,11 +1,11 @@
 import React from 'react';
-import "./BuyButton.scss"
-import ExchangeChoice from "../ExchangeChoice/ExchangeChoice.jsx";
+import "./CurrencyСomparison.scss"
+import "./ExchangeChoice.scss"
 import {ReactComponent as Raydium} from "../../assets/icons/RaydiumIcon.svg"
 import {ReactComponent as Sunswap} from "../../assets/icons/SunswapIcon.svg"
 import {ReactComponent as VsIcon} from "../../assets/icons/VsIcon.svg"
 
-const BuyButton = ({urls}) => {
+const CurrencyOmparison = ({urls}) => {
     const SWHALE = urls.SWHALE || "https://google.com";
     const TWHALE = urls.TWHALE || "https://google.com";
     const RAYDIUM = urls.RAYDIUM || "https://google.com";
@@ -38,4 +38,4 @@ const BuyButton = ({urls}) => {
     );
 };
 
-export default BuyButton;
+export default CurrencyOmparison;

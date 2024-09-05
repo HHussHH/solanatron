@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import useWindowSize from "../../../helpers/useWindowSize.js";
+import useTargetInfo from "./useTargetInfo.js";
 
 const TargetPrice = ({data}) => {
 
@@ -37,11 +38,8 @@ const TargetPrice = ({data}) => {
             });
     }, []);
 
-    const { progressValue } = useWindowSize(currentValue, currentTRX, currentSOL);
+    const { progressValue } = useTargetInfo(currentValue, currentTRX, currentSOL);
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
 
 
     return (
@@ -49,7 +47,7 @@ const TargetPrice = ({data}) => {
             <span className={"Dashboard__total__text"}>TargetPrice</span>
             <div className={"Dashboard__targetBar"}>
                 <div className={"Dashboard__leftBar"}>
-                    <span className={"Dashboard__leftBar__currentValue"}>{"$" + currentSOL}</span>
+                    <span className={"Dashboard__leftBar__currentValue"}>{loading ? "loading...":"$" + currentSOL}</span>
                     <span style={{width: `${progressValue.SOL}%`}} className={"Dashboard__leftBar__progress"}></span>
                 </div>
                 <div className={"Dashboard__total"}>
@@ -58,7 +56,7 @@ const TargetPrice = ({data}) => {
                     </span>
                 </div>
                 <div className={"Dashboard__rightBar"}>
-                    <span className={"Dashboard__rightBar__currentValue"}>{"$" + currentTRX}</span>
+                    <span className={"Dashboard__rightBar__currentValue"}>{loading ? "loading...":"$" + currentTRX}</span>
                     <span style={{width: `${progressValue.TRX}%`}} className={"Dashboard__rightBar__progress"}></span>
                 </div>
             </div>

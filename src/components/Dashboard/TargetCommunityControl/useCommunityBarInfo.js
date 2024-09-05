@@ -1,4 +1,4 @@
-const useCommunityTokenBarCalculation = (tron, solana, currentValue) => {
+const useCommunityBarInfo= (tron, solana, currentValue) => {
     const totalTokens = 1_000_000_000; // 1 миллиард
 
     const calculatePercentage = (tokens) => {
@@ -26,4 +26,4 @@ const useCommunityTokenBarCalculation = (tron, solana, currentValue) => {
     };
 };
 
-export default useCommunityTokenBarCalculation;
+export default useCommunityBarInfo;

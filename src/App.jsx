@@ -4,10 +4,10 @@ import './App.css'
 import SocialGroup from "./components/SocialGroup/SocialGroup.jsx";
 import WhaleGroup from "./components/WhaleGroup/WhaleGroup.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
-import BuyButton from "./components/BuyButton/BuyButton.jsx";
+import CurrencyOmparison from "./components/CurrencyСomparison/CurrencyСomparison.jsx";
 import About from "./components/About/About.jsx";
 import LearnMore from "./components/LearnMore/LearnMore.jsx";
-import {fetchData} from "./fetchData/fetchData.js";
+import {fetchJSON} from "./fetchData/fetchData.js";
 
 
 function App() {
@@ -15,9 +15,7 @@ function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-
-
-        fetchData()
+        fetchJSON()
             .then((fetchedData) => {
                 setJsonData(fetchedData);
                 setLoading(false);
@@ -46,18 +44,12 @@ function App() {
               TrxCopy:jsonData.TRX_CONTRACT_COPY_TEXT,
               TargetPriceValue:jsonData.TARGET_PRICE_VALUE,
               TargetCommunityValue:jsonData.TARGET_COMMUNITY_CONTROL_VALUE,
-              TargetCommunitySol:jsonData.TARGET_COMMUNITY_CONTROL_SOL,
-              TargetCommunityTrx:jsonData.TARGET_COMMUNITY_CONTROL_TRX,
-              PumpPoolValue:jsonData.PUMP_POOL_VALUE,
               PumpPoolSolUrl:jsonData.PUMP_POOL_SOL_URL,
               PumpPoolTrxUrl:jsonData.PUMP_POOL_TRX_URL,
-              PumpPoolSol:jsonData.TARGET_COMMUNITY_CONTROL_SOL,
-              PumpPoolTrx:jsonData.TARGET_COMMUNITY_CONTROL_TRX,
-              CharityValue:jsonData.CHARITY_VALUE,
               CharitySolUrl:jsonData.CHARITY_SOL_URL,
               CharityTrxUrl:jsonData.CHARITY_TRX_URL
           }}/>
-          <BuyButton urls={{
+          <CurrencyOmparison urls={{
               SWHALE: jsonData.SWHALE_SITE,
               TWHALE:jsonData.TWHALE_SITE,
               RAYDIUM: jsonData.RAYDIUM_SITE,

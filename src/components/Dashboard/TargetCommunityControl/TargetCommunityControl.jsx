@@ -1,12 +1,12 @@
 import React from 'react';
-import useCommunityTokenBarCalculation from "./useCommunityTokenBarCalculation.js"
+import useCommunityBarInfo from "./useCommunityBarInfo.js"
 
-const TargetComunityControl = ({data}) => {
+const TargetCommunityControl = ({data}) => {
     const currentValue = data.TargetCommunityValue || 90;
     const currentSOL =  820_000_000;
     const currentTRX = 790_000_000;
 
-    const {solanaBarFill,tronBarFill,solanaPercentage,tronPercentage} = useCommunityTokenBarCalculation(currentTRX,currentSOL,currentValue)
+    const {solanaBarFill,tronBarFill,solanaPercentage,tronPercentage} = useCommunityBarInfo(currentTRX,currentSOL,currentValue)
     return (
         <div className={"Dashboard"}>
             <span className={"Dashboard__total__text"}>Target Community Control</span>
@@ -29,4 +29,4 @@ const TargetComunityControl = ({data}) => {
     );
 };
 
-export default TargetComunityControl;
+export default TargetCommunityControl;
