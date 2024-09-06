@@ -20,7 +20,7 @@ const Charity = ({data}) =>  {
     useEffect(()=>{
         const fetchTRX = async() =>{
             try{
-                const data = await trxBalance();
+                const data = await trxBalance(TrxToCopy);
                 setCurrentTRX(data)
             }catch (e){
                 console.error("TRX not found: ", e);
@@ -28,7 +28,7 @@ const Charity = ({data}) =>  {
         }
         const fetchSOL = async() =>{
             try{
-                const data = await solBalance();
+                const data = await solBalance(SolToCopy);
                 setCurrentSOL(data)
             }catch (e){
                 console.error("TRX not found: ", e);

@@ -23,7 +23,7 @@ const Dashboard = ({data}) => {
             }}/>
             <Charity data={{
                 CharitySolUrl:data.CharitySolUrl,
-                CharityTrxUrl:data.CharitySolUrl,
+                CharityTrxUrl:data.CharityTrxUrl,
             }}/>
         </div>
     );

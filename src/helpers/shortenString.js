@@ -1,5 +1,5 @@
 export const shortenString = (str,prefixLen) => {
-    const maxLength = 37;
+    const maxLength = 20;
 
     if (str.length <= maxLength) {
         return str;

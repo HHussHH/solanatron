@@ -7,8 +7,8 @@ import {usePumpAndCharityData} from "./usePumpAndCharityData.js";
 import {exchangeSOL, exchangeTRX, solBalance, trxBalance} from "../../../fetchData/fetchData.js";
 const PumpPool = ({data}) => {
 
-    const SolToCopy = data.PumpPoolSolUrl || "6NRNLiswWzp6PW7FhKi6mWBehijflKSH34u9q3kL1dEXc1tfYu";
-    const TrxToCopy = data.PumpPoolTrxUrl || "6NRNLiswWzp6PW7FhKi6mWBehijflKSH34u9q3kL1dEXc1tfYu";
+    const SolToCopy = data.PumpPoolSolUrl || "76uUWJDUE9YoBPtkb5gi8ZFX7UxLTs2rXTj8tyrmLYw2";
+    const TrxToCopy = data.PumpPoolTrxUrl || "TZ8PyDyBVX5FLxJQxskM4ZfxpSgsXQrWZE";
     const [copied, setCopied] = useState({ SOL: false, TRX: false });
     const [currentTRX, setCurrentTRX] = useState(null);
     const [currentSOL, setCurrentSOL] = useState(null);
@@ -19,7 +19,7 @@ const PumpPool = ({data}) => {
     useEffect(()=>{
         const fetchTRX = async() =>{
             try{
-                const data = await trxBalance();
+                const data = await trxBalance(TrxToCopy);
                 setCurrentTRX(data)
             }catch (e){
                 console.error("TRX not found: ", e);
@@ -27,7 +27,7 @@ const PumpPool = ({data}) => {
         }
         const fetchSOL = async() =>{
             try{
-                const data = await solBalance();
+                const data = await solBalance(SolToCopy);
                 setCurrentSOL(data)
             }catch (e){
                 console.error("TRX not found: ", e);

@@ -8,17 +8,16 @@ export const fetchJSON = async () => {
     return data;
 }
 
-export const trxBalance = async () =>{
-    const data = await fetch("https://api.vd3.fun/v1/externals/trx-balance")
+export const trxBalance = async (address) =>{
+    const data = await fetch(`https://api.vd3.fun/v1/externals/trx-balance?address=${address}`)
         .then(response => response.json())
 
     return Number(data.value).toFixed(2)
 }
 
-export const solBalance = async () =>{
-    const data = await fetch("https://api.vd3.fun/v1/externals/sol-balance")
+export const solBalance = async (address) =>{
+    const data = await fetch(`https://api.vd3.fun/v1/externals/sol-balance?address=${address}`)
         .then(response => response.json())
-
     return Number(data.value).toFixed(2)
 }
 
