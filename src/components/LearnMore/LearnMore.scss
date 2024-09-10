@@ -22,18 +22,16 @@
     align-items: center;
     cursor: pointer;
 
-
-    &__text{
-      font-family: Inter, sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      color:#FFFFFF;
-      background:none;
-      text-decoration: none;
-
-    }
   }
 
+  &__text{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#FFFFFF;
+    background:none;
+    text-decoration: none;
+  }
 }
 
 

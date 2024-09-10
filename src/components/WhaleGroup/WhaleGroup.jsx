@@ -7,8 +7,6 @@ import useWindowSize from "../../helpers/useWindowSize.js";
 const WhaleGroup = () => {
 
     const { currentWidth } = useWindowSize();
-
-
     const Whales = currentWidth > 480 ? WhaleDesktop : WhaleMobile;
     return (
        <>

@@ -7,7 +7,7 @@ const LearnMore = ({urlLearnMore}) => {
     return (
         <div className="SocialMoreInfo">
             <button className="SocialMoreInfo__btn">
-                <a  className="SocialMoreInfo__btn__text" href={link} rel="manifest" target="_blank">Learn more</a>
+                <a  className="SocialMoreInfo__text" href={link} rel="manifest" target="_blank">Learn more</a>
             </button>
         </div>
     );

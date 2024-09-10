@@ -11,8 +11,6 @@ const SocialGroup = ({className,urls,width,mod}) => {
     const x = urls.twitter || "https://twitter.com"
 
     const { currentWidth } = useWindowSize();
-
-
     const currentSize = currentWidth > 1439 ? 34 : currentWidth < 480 ? 34 : 34;
 
     return (

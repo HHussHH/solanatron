@@ -15,6 +15,12 @@ export const trxBalance = async (address) =>{
     return Number(data.value).toFixed(2)
 }
 
+export const solBalance = async (address) =>{
+    const data = await fetch(`https://api.vd3.fun/v1/externals/sol-balance?address=${address}`)
+        .then(response => response.json())
+    return Number(data.value).toFixed(2)
+}
+
 export const SwhaleCurrency = async () =>{
     const data = await fetch(`https://api.vd3.fun/v1/externals/swhale-currency`)
         .then(response => response.json())
@@ -27,12 +33,6 @@ export const TwhaleCurrency = async () =>{
         .then(response => response.json())
 
     return Number(data.price).toFixed(6)
-}
-
-export const solBalance = async (address) =>{
-    const data = await fetch(`https://api.vd3.fun/v1/externals/sol-balance?address=${address}`)
-        .then(response => response.json())
-    return Number(data.value).toFixed(2)
 }
 
 export const exchangeSOL = async () =>{
@@ -48,7 +48,6 @@ export const exchangeTRX = async () =>{
 
     return Number(data.price).toFixed(2)
 }
-
 
 export const tronTokenBalance = async () =>{
     const data = await fetch(`https://api.vd3.fun/v1/externals/tron-token-balance?address=TEk6o9M6JqeJCGcq8zVP6b8dMtxFjGPh51&token=TVx8q2U4QLnXHC3xBvLggMfxGEikrWK8Wh`)

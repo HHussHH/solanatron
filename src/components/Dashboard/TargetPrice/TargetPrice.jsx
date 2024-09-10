@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import useWindowSize from "../../../helpers/useWindowSize.js";
 import useTargetInfo from "./useTargetInfo.js";
 import {SwhaleCurrency, TwhaleCurrency} from "../../../fetchData/fetchData.js";
 

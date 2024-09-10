@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {сopyToClipboard} from "../../../helpers/CopyToClipboard.js";
 import "./Contract.scss"
 import {ReactComponent as CopyIcon} from "../../../assets/icons/CopyIcon.svg"
