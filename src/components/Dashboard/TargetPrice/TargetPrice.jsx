@@ -16,7 +16,10 @@ const TargetPrice = ({data}) => {
                 const data = await SwhaleCurrency();
                 setCurrentSOL(data)
                 setLoading(false)
+                localStorage.setItem("TargetPriceSOL",data)
             }catch (e){
+                const data = localStorage.getItem("TargetPriceSOL");
+                setCurrentSOL(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -25,7 +28,10 @@ const TargetPrice = ({data}) => {
                 const data = await TwhaleCurrency();
                 setCurrentTRX(data)
                 setLoading(false)
+                localStorage.setItem("TargetPriceTRX",data)
             }catch (e){
+                const data = localStorage.getItem("TargetPriceTRX");
+                setCurrentTRX(data)
                 console.error("TRX not found: ", e);
             }
         }

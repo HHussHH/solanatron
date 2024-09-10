@@ -22,7 +22,10 @@ const Charity = ({data}) =>  {
             try{
                 const data = await trxBalance(TrxToCopy);
                 setCurrentTRX(data)
+                localStorage.setItem("CharityTRX",data)
             }catch (e){
+                const data = localStorage.getItem("CharityTRX");
+                setCurrentTRX(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -30,7 +33,10 @@ const Charity = ({data}) =>  {
             try{
                 const data = await solBalance(SolToCopy);
                 setCurrentSOL(data)
+                localStorage.setItem("CharitySOL",data)
             }catch (e){
+                const data = localStorage.getItem("CharitySOL");
+                setCurrentSOL(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -38,7 +44,10 @@ const Charity = ({data}) =>  {
             try{
                 const data = await exchangeTRX();
                 setCurrentExTRX(data)
+                localStorage.setItem("CharityExTRX",data)
             }catch (e){
+                const data = localStorage.getItem("CharityExTRX");
+                setCurrentExTRX(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -46,7 +55,10 @@ const Charity = ({data}) =>  {
             try{
                 const data = await exchangeSOL();
                 setCurrentExSOL(data)
+                localStorage.setItem("CharityExSOL",data)
             }catch (e){
+                const data = localStorage.getItem("CharityExSOL");
+                setCurrentExSOL(data)
                 console.error("TRX not found: ", e);
             }
         }

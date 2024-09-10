@@ -18,7 +18,10 @@ const TargetCommunityControl = ({data}) => {
                 const data = await SolTokenBalance();
                 setCurrentSOL(data)
                 setLoading(false)
+                localStorage.setItem("TargetCommunitySOL",data)
             }catch (e){
+                const data = localStorage.getItem("TargetCommunitySOL");
+                setCurrentSOL(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -27,7 +30,10 @@ const TargetCommunityControl = ({data}) => {
                 const data = await tronTokenBalance();
                 setCurrentTRX(data)
                 setLoading(false)
+                localStorage.setItem("TargetCommunityTRX",data)
             }catch (e){
+                const data = localStorage.getItem("TargetCommunityTRX");
+                setCurrentTRX(data)
                 console.error("TRX not found: ", e);
             }
         }

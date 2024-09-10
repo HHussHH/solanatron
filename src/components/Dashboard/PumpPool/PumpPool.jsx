@@ -21,7 +21,10 @@ const PumpPool = ({data}) => {
             try{
                 const data = await trxBalance(TrxToCopy);
                 setCurrentTRX(data)
+                localStorage.setItem("PumpPoolTRX",data)
             }catch (e){
+                const data = localStorage.getItem("PumpPoolTRX");
+                setCurrentTRX(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -29,7 +32,10 @@ const PumpPool = ({data}) => {
             try{
                 const data = await solBalance(SolToCopy);
                 setCurrentSOL(data)
+                localStorage.setItem("PumpPoolSOL",data)
             }catch (e){
+                const data = localStorage.getItem("PumpPoolSOL");
+                setCurrentSOL(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -37,7 +43,10 @@ const PumpPool = ({data}) => {
             try{
                 const data = await exchangeTRX();
                 setCurrentExTRX(data)
+                localStorage.setItem("PumpPoolExTRX",data)
             }catch (e){
+                const data = localStorage.getItem("PumpPoolExTRX");
+                setCurrentExTRX(data)
                 console.error("TRX not found: ", e);
             }
         }
@@ -45,7 +54,10 @@ const PumpPool = ({data}) => {
             try{
                 const data = await exchangeSOL();
                 setCurrentExSOL(data)
+                localStorage.setItem("PumpPoolExSOL",data)
             }catch (e){
+                const data = localStorage.getItem("PumpPoolExSOL");
+                setCurrentExSOL(data)
                 console.error("TRX not found: ", e);
             }
         }
