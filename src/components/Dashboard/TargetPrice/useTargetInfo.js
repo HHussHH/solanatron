@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
 function useTargetInfo(currentValue, currentTRX, currentSOL) {
+
+
     const [progressValue, setProgressValue] = useState({
         SOL: 0,
         TRX: 0,

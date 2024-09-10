@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import useWindowSize from "../../../helpers/useWindowSize.js";
 import useTargetInfo from "./useTargetInfo.js";
+import {SwhaleCurrency, TwhaleCurrency} from "../../../fetchData/fetchData.js";
 
 const TargetPrice = ({data}) => {
 
@@ -11,31 +12,27 @@ const TargetPrice = ({data}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://api.vd3.fun/v1/externals/swhale-currency')
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setCurrentSOL(Number(data.price).toFixed(6));
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-                setLoading(false);
-            });
+        const fetchSwhale = async() =>{
+            try{
+                const data = await SwhaleCurrency();
+                setCurrentSOL(data)
+                setLoading(false)
+            }catch (e){
+                console.error("TRX not found: ", e);
+            }
+        }
+        const fetchTwhale = async() =>{
+            try{
+                const data = await TwhaleCurrency();
+                setCurrentTRX(data)
+                setLoading(false)
+            }catch (e){
+                console.error("TRX not found: ", e);
+            }
+        }
+        fetchSwhale();
+        fetchTwhale();
 
-        fetch('https://api.vd3.fun/v1/externals/twhale-currency')
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setCurrentTRX(Number(data.price).toFixed(6));
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-                setLoading(false);
-            });
     }, []);
 
     const { progressValue } = useTargetInfo(currentValue, currentTRX, currentSOL);

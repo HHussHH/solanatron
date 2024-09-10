@@ -7,6 +7,9 @@ import PumpPool from "./PumpPool/PumpPool.jsx";
 import Charity from "./Charity/Charity.jsx";
 import Contract from "./Contract/Contract.jsx";
 const Dashboard = ({data}) => {
+
+
+
     return (
         <div className="Dashboard__container">
             <Contract data={{

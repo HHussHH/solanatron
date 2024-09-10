@@ -56,11 +56,7 @@ function App() {
               SUNSWAP:jsonData.SUNSWAP_SITE
           }}/>
           <About/>
-          <LearnMore urlLearnMore={{learnMore: jsonData.LEARN_MORE_SITE}} urls={{
-              twitter: jsonData.TWITTER_URL,
-              telegram:jsonData.TELEGRAM_URL,
-              docs:jsonData.Docs_URL,
-          }}/>
+          <LearnMore urlLearnMore={{learnMore: jsonData.LEARN_MORE_SITE}}/>
           <SocialGroup
               mod={"end"}
               urls={{
